@@ -1,0 +1,157 @@
+/* base.css */
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+}
+
+#header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+#header .logo {
+    font-size: 24px;
+    text-decoration: none;
+    color: #fff;
+}
+
+#header .menu {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+#header .menu li {
+    display: inline;
+    margin-right: 10px;
+}
+
+#header .menu li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#header .menu li.selected a {
+    font-weight: bold;
+    border-bottom: 2px solid #fff;
+}
+
+#header .user {
+    font-size: 14px;
+}
+
+#header .user a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+#subheader {
+    background-color: #f4f4f4;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+#subheader .cart {
+    font-size: 16px;
+}
+
+#content {
+    padding: 20px;
+    background-color: #fff;
+}
+
+h1, h2, h3 {
+    color: #333;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+button, input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button:hover, input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+table th {
+    background-color: #f4f4f4;
+}
+
+.table td.num {
+    text-align: right;
+}
+
+.cart .total {
+    font-weight: bold;
+    background-color: #f4f4f4;
+}
+
+.sidebar {
+    float: left;
+    width: 25%;
+    padding: 20px;
+}
+
+.product-list {
+    float: left;
+    width: 70%;
+    padding: 20px;
+}
+
+.item {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #fff;
+}
+
+.item img {
+    max-width: 100%;
+    height: auto;
+}
+
+.product-detail {
+    margin: 20px 0;
+}
+
+.product-detail img {
+    max-width: 100%;
+    height: auto;
+}
+
+.selected {
+    font-weight: bold;
+    color: #007bff;
+}
