@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [ 
     'users', 'products', 'cart', 
+    'django_extensions',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -132,3 +133,10 @@ LOGIN_REDIRECT_URL = 'dashboard'
 LOGIN_URL = 'login'
 LOGOUT_URL = 'logout'
 
+from .token import *
+
+STRIPE_PUBLISHABLE_KEY = publishable_key
+STRIPE_SECRET_KEY = secret_key
+STRIPE_API_VERSION = '2024-08-15'
+
+# python manage.py runserver_plus --cert-file cert.crt
