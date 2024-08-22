@@ -32,7 +32,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [ 
-    'users', 'products', 'cart', 
+    'users', 'products', 'cart',
+    'orders', 'payment',
     'django_extensions',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -127,6 +128,8 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CART_SESSION_ID = 'cart'
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
 
 LOGIN_REDIRECT_URL = 'dashboard'

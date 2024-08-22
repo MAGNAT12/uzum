@@ -1,5 +1,6 @@
 /* base.css */
 
+/* Основные стили остаются прежними */
 body {
     font-family: Arial, sans-serif;
     color: #333;
@@ -8,11 +9,16 @@ body {
     padding: 0;
 }
 
+/* Стили для шапки */
 #header {
     background-color: #333;
     color: #fff;
     padding: 10px 20px;
     text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 #header .logo {
@@ -25,10 +31,11 @@ body {
     list-style: none;
     padding: 0;
     margin: 10px 0;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 #header .menu li {
-    display: inline;
     margin-right: 10px;
 }
 
@@ -44,6 +51,7 @@ body {
 
 #header .user {
     font-size: 14px;
+    margin-top: 10px;
 }
 
 #header .user a {
@@ -97,6 +105,7 @@ table {
     width: 100%;
     border-collapse: collapse;
     margin: 20px 0;
+    font-size: 14px;
 }
 
 table th, table td {
@@ -154,4 +163,77 @@ table th {
 .selected {
     font-weight: bold;
     color: #007bff;
+}
+
+/* Адаптивные стили */
+@media screen and (max-width: 768px) {
+    #header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #header .menu {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .sidebar, .product-list {
+        float: none;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .product-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    table th, table td {
+        font-size: 12px;
+        padding: 5px;
+    }
+
+    #content {
+        padding: 10px;
+    }
+
+    .cart .total {
+        text-align: right;
+        padding-right: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #header {
+        padding: 5px 10px;
+    }
+
+    #header .logo {
+        font-size: 20px;
+    }
+
+    #header .menu {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #header .menu li {
+        margin-right: 0;
+        margin-bottom: 5px;
+    }
+
+    #header .user {
+        margin-top: 5px;
+    }
+
+    table th, table td {
+        font-size: 10px;
+        padding: 3px;
+    }
+
+    button, input[type="submit"] {
+        padding: 5px 10px;
+        font-size: 12px;
+    }
 }
