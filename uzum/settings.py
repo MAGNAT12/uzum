@@ -130,6 +130,11 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CART_SESSION_ID = 'cart'
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = email_host
+EMAIL_HOST_PASSWORD = email_host_user
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
 
 
 LOGIN_REDIRECT_URL = 'dashboard'
@@ -140,6 +145,6 @@ from .token import *
 
 STRIPE_PUBLISHABLE_KEY = publishable_key
 STRIPE_SECRET_KEY = secret_key
-STRIPE_API_VERSION = '2024-08-15'
+STRIPE_API_VERSION = api_version
 
 # python manage.py runserver_plus --cert-file cert.crt
